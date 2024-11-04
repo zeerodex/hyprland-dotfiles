@@ -1,0 +1,44 @@
+# GLOBAL
+#sort=+time
+layer=overlay
+
+# STYLE
+font=JetBrains Mono Nerd Font 10
+margin=20
+padding=5, 5, 5, 5
+border-size=3
+border-radius=10
+progress-color=#cba6f7
+background-color=#1e1e2e
+border-color=#45475a
+default-timeout=2500
+max-icon-size=125
+icon-path=/usr/share/icons/Papirus/
+icon-location=left
+format=<b>%s</b>\n%b
+text-alignment=left
+anchor=top-right
+
+# CRITERA
+## urgency
+[urgency=low]
+default-timeout=2500
+background-color=#1e1e2e
+border-color=#313244
+text-color=#cdd6f4
+
+[urgency=normal]
+default-timeout=2500
+background-color=#1e1e2e
+border-color=#45475a
+text-color=#cdd6f4
+
+
+[urgency=critical]
+default-timeout=5000
+background-color=#1e1e2e
+border-color=#cba6f7
+text-color=#cdd6f4
+
+
+

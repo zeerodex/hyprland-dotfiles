@@ -1,0 +1,199 @@
+@import "./mocha.css";
+
+* {
+  font-family: JetBrains Mono Nerd Font;
+  font-weight: 700;
+  font-size: 13.5px;
+  min-height: 0;
+}
+
+@define-color bg #1e1e2e;
+@define-color bg2 #181825;
+@define-color fg #cdd6f4;
+@define-color pink #f5c2e7;
+@define-color green #a6e3a1;
+@define-color fl #f2cdcd;
+@define-color blue #89b4fa;
+@define-color red #eba0ac;
+@define-color vl #cba6f7;
+@define-color yellow #fab387;
+
+window#waybar {
+  border-radius: 10;
+  background-color: @bg;
+}
+
+#custom-menu {
+  padding: 2 15 2 12;
+  margin: 3 5 3 10;
+  color: @sapphire;
+  font-size: 18px;
+  background-color: @bg2;
+  border: none;
+  border-radius: 20;
+}
+#custom-menu:hover {
+  color: @mauve;
+}
+
+#workspaces {
+  padding: 2 15 2 10;
+  margin: 3;
+  color: @red;
+  background-color: @bg2;
+  border: none;
+  border-radius: 20;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background-color: transparent;
+  color: @text;
+}
+#workspaces button:hover {
+  color: @mauve;
+}
+#workspaces button.focused {
+}
+#workspaces button.urgent {
+  color: @red;
+}
+#workspaces button.active {
+  color: @mauve;
+}
+
+#tray {
+  padding: 2 15;
+  margin: 3;
+  background-color: @bg2;
+  border: none;
+  border-radius: 20;
+}
+
+#language {
+  padding: 2 15;
+  margin: 3;
+  color: @fg;
+  background-color: @bg2;
+  border: none;
+  border-radius: 20;
+}
+#language:hover {
+  color: @mauve;
+}
+
+#pulseaudio {
+  padding: 2 15;
+  margin: 3;
+  color: @fg;
+  background-color: @bg2;
+  border: none;
+  border-radius: 20;
+}
+#pulseaudio.muted {
+  color: @red;
+}
+#pulseaudio:hover {
+  color: @mauve;
+}
+
+#clock {
+  padding: 2 15;
+  margin: 3;
+  color: @fg;
+  background-color: @bg2;
+  border: none;
+  border-radius: 20;
+}
+#clock:hover {
+  color: @mauve;
+}
+
+#custom-power {
+  padding: 2 15 2 10;
+  font-size: 17px;
+  margin: 3 10 3 5;
+  color: @red;
+  background-color: @bg2;
+  border: none;
+  border-radius: 20;
+}
+#custom-power:hover {
+  color: @red;
+}
+
+#custom-quit {
+  padding: 2 15 2 15;
+  margin: 5 0;
+  font-size: 20px;
+  /*background-color: @bg2;*/
+  border: none;
+  border-radius: 20 0 20 20;
+}
+#custom-lock {
+  padding: 2 15 2 15;
+  margin: 5 0;
+  font-size: 20px;
+  /*background-color: @bg2;*/
+  border: none;
+  border-radius: 20 0 20 20;
+}
+#custom-suspend {
+  padding: 2 15 2 15;
+  margin: 5 0;
+  font-size: 20px;
+  /*background-color: @bg2;*/
+  border: none;
+  border-radius: 20 0 20 20;
+}
+
+#custom-reboot {
+  padding: 2 15 2 15;
+  margin: 5 0;
+  font-size: 20px;
+  /*background-color: @bg2;*/
+  border: none;
+  border-radius: 20 0 20 20;
+}
+#custom-quit:hover,
+#custom-lock:hover,
+#custom-suspend:hover,
+#custom-reboot:hover {
+  color: @red;
+}
+
+#idle_inhibitor {
+  padding: 2 10;
+  margin: 3;
+  font-size: 15px;
+  /*background-color: @bg2;*/
+  border-radius: 20;
+}
+#hardware {
+  padding: 2 15;
+  margin: 3;
+  background-color: @bg2;
+  border-radius: 20;
+}
+
+#cpu {
+  padding: 2 10 2 0;
+  /*margin: 3 0;*/
+  font-size: 15px;
+}
+#memory {
+  padding: 2 0 0 0;
+  /*margin: 3 0;*/
+  font-size: 15px;
+}
+#cpu:hover,
+#memory:hover {
+  color: @mauve;
+}
+tooltip {
+  background: @bg;
+  margin: 20px;
+  padding: 15px;
+  border: 20px solid rgba(100, 114, 125, 0);
+  border-radius: 10px;
+}

@@ -1,0 +1,181 @@
+// -*- mode: jsonc -*-
+{
+  "margin-right": 5,
+  "margin-left": 5,
+  "margin-top": 5,
+
+  "modules-left": ["custom/menu", "hyprland/workspaces", "group/hardware"],
+  "modules-center": ["custom/spotify"],
+  "modules-right": [
+    "idle_inhibitor",
+    "tray",
+    "hyprland/language",
+    "pulseaudio",
+    "clock",
+    "group/group-power",
+  ],
+
+  "custom/menu": {
+    "format": "{icon}",
+    "format-icons": "󰣇",
+    "on-click": "~/.config/rofi/launchers/type-6/launcher.sh",
+    "escape": true,
+    "tooltip": false,
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": " ",
+      "deactivated": " ",
+    },
+  },
+  "group/hardware": {
+    "orientation": "inherit",
+    "modules": ["cpu", "memory"],
+  },
+  "cpu": {
+    "interval": 3,
+    "format": "<span color='#94e2d5'> </span>{usage}%",
+    "max-length": 10,
+    "on-click": "alacritty --title htop -e htop",
+  },
+  "memory": {
+    "interval": 5,
+    "format": "<span color='#94e2d5'> </span>{used:0.1f}G",
+    "on-click": "alacritty --title htop -e htop",
+  },
+
+  "group/group-power": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 350,
+      "children-class": "not-power",
+      "transition-left-to-right": false,
+    },
+    "modules": [
+      "custom/power", // First element is the "group leader" and won't ever be hidden
+      "custom/quit",
+      "custom/lock",
+      "custom/suspend",
+      "custom/reboot",
+    ],
+  },
+  "custom/quit": {
+    "format": "󰗼",
+    "tooltip": false,
+    "on-click": "hyprctl dispatch exit",
+  },
+  "custom/suspend": {
+    "format": "󰤄",
+    "tooltip": false,
+    "on-click": "systemctl suspend",
+  },
+  "custom/lock": {
+    "format": "󰍁",
+    "tooltip": false,
+    "on-click": "hyprlock",
+  },
+  "custom/reboot": {
+    "format": "󰜉",
+    "tooltip": false,
+    "on-click": "systemctl reboot",
+  },
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "systemctl poweroff",
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "urgent": "",
+      "steam": "",
+      "browser": "󰈹",
+      "home": "",
+      "zoom": "",
+      "documents": "󱔗",
+    },
+    "persistent-workspaces": {
+      "*": 3,
+    },
+    "tooltip": false,
+  },
+
+  "hyprland/window": {
+    "format": "{class}",
+    "separate-outputs": false,
+  },
+  "custom/weather": {
+    "format": "{}",
+    "interval": 10,
+    "exec": "~/.config/waybar/weather.sh",
+    "tooltip": false,
+  },
+  "custom/spotify": {
+    "format": "<span color='#a6e3a1'> </span> {}",
+    "max-length": 200,
+    "exec-if": "pgrep spotify",
+    "exec-on-event": "on-click",
+    "interval": 1,
+    "return-type": "json",
+    "on-click": "playerctl -p spotify next",
+    "on-click-right": "playerctl -p spotify previous",
+    "on-click-middle": "playerctl -p spotify play-pause",
+    "tooltip": true,
+    "escape": true,
+    "exec": "~/.config/waybar/scripts/player.sh",
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+  },
+
+  "hyprland/language": {
+    "format": "<span color='#f9e2af'>󰌏 </span> {}",
+    "format-en": "EN",
+    "format-ru": "RU",
+    "format-uk": "UA",
+  },
+
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": "<span color='#eba0ac'>{icon} </span> {volume}%",
+    "format-icons": {
+      "default": ["", "", ""],
+    },
+    "format-muted": "  0%",
+    "on-click": "pavucontrol",
+    "on-click-right": "pamixer -t",
+    "tooltip": false,
+  },
+
+  "clock": {
+    "format": "<span color='#cba6f7'> </span> {:%H:%M}",
+    "tooltip-format": "<big><span color='#cdd6f4'>{:%Y %B}</span></big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "<span color='#eba0ac'> </span> <span color='#cdd6f4'>{:%a %Y-%m-%d}</span>",
+
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#cdd6f4'><b>{}</b></span>",
+        "days": "<span color='#cdd6f4'><b>{}</b></span>",
+        "weeks": "<span color='#f5c2e7'><b>W{}</b></span>",
+        "weekdays": "<span color='#f5c2e7'><b>{}</b></span>",
+        "today": "<span color='#eba0ac'><b><u>{}</u></b></span>",
+      },
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+    },
+  },
+}
