@@ -1,0 +1,58 @@
+# Mako configuration with Gruvbox theme
+# Save this file to ~/.config/mako/config
+
+# General configuration
+max-history=100
+sort=-time
+
+# Appearance
+font=Iosevka Nerd 10
+width=300
+height=100
+margin=10
+padding=15
+border-size=1
+border-radius=0
+progress-color=over #ebdbb2
+
+# Default timeout (in milliseconds)
+default-timeout=4000
+
+# Gruvbox colors
+background-color=#282828
+text-color=#ebdbb2
+border-color=#d65d0e
+
+# Low urgency notifications
+[urgency=low]
+background-color=#282828
+text-color=#a89984
+border-color=#928374
+
+# Normal urgency notifications
+[urgency=normal]
+background-color=#282828
+text-color=#ebdbb2
+border-color=#d65d0e
+
+# Critical urgency notifications
+[urgency=critical]
+background-color=#cc241d
+text-color=#fbf1c7
+border-color=#fb4934
+
+# Application-specific notification styling
+[app-name=Zen]
+background-color=#1d2021
+text-color=#83a598
+border-color=#458588
+
+[app-name=Telegram]
+background-color=#1d2021
+text-color=#83a598
+border-color=#458588
+
+[app-name=Discord]
+background-color=#1d2021
+text-color=#d3869b
+border-color=#b16286
