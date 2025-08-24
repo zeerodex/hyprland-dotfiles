@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 NUM_TERMINALS="${1:-1}" # Default to 3 terminals if not specified
 TERM_DIR="$HOME/go/src/github.com/zeerodex/goot/"

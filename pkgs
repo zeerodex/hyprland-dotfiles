@@ -10,20 +10,21 @@ ffmpegthumbnailer
 fzf
 gamemode
 git
-go
-gowall
 grim
 gvfs
 htop
 hypridle
 hyprland
 hyprlock
+hyprpaper
 hyprpolkitagent
 imv
 kitty
 kvantum
 lazygit
 less
+lib32-gamemode
+lib32-mangohud
 lib32-mesa
 lib32-pipewire
 lib32-pipewire-jack
@@ -31,6 +32,7 @@ lib32-vulkan-radeon
 libreoffice-still
 ly
 mako
+mangohud
 mesa
 mpv
 neovim
@@ -48,7 +50,6 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 playerctl
-postgresql
 qbittorrent
 qt5-wayland
 qt5ct
@@ -60,7 +61,6 @@ slurp
 steam
 sudo
 swappy
-swww
 syncthing
 telegram-desktop
 thunar
@@ -73,7 +73,6 @@ unzip
 vim
 vulkan-radeon
 waybar
-wine
 wireplumber
 xarchiver
 xclip
