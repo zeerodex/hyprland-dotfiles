@@ -32,10 +32,10 @@ default-timeout=2500
 background-color=#282828
 text-color=#ebdbb2
 border-color=#504945
-default-timeout=5500
+default-timeout=4500
 
 [urgency=critical]
 background-color=#cc241d
 text-color=#fbf1c7
 border-color=#fb4934
-default-timeout=0
+default-timeout=7500
