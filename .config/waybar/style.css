@@ -15,7 +15,7 @@
 /* ======================================================== */
 
 window#waybar {
-  background: #1d2021;
+  background: rgba(29, 32, 33, 0.8);
 }
 
 window#waybar.hidden {
@@ -29,9 +29,25 @@ window#waybar.empty #window {
   color: transparent;
 }
 
+/* Tooltip */
+
+tooltip {
+    background-color: #32302f; 
+    color: #ebdbb2;           
+    border: 1px solid #d5c4a1; 
+    border-radius: 0px;
+    padding: 8px 12px;
+    font-size: 18px;
+}
+
+tooltip label {
+    color: #ebdbb2;
+}
+
 /* ======================================================== */
 /* Module Specific Styles */
 /* ======================================================== */
+
 
 /* General module spacing */
 #tray,
@@ -154,6 +170,15 @@ window#waybar.empty #window {
   border-radius: 0.7px;
   min-width: 22px;
   margin: 3px 4px;
+}
+
+#tray menu {
+    background-color: #32302f; 
+    color: #ebdbb2;           
+    border: 1px solid #d5c4a1; 
+    border-radius: 0px;
+    padding: 8px 12px;
+    font-size: 18px;
 }
 
 /* Language and Status Modules */

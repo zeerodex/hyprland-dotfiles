@@ -83,25 +83,24 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# Go env
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN:/usr/local/go/bin
-
-# Env for gemini-cli
-export GEMINI_API_KEY="AIzaSyDjYMzsVW1_A7kqHDTipBW6VdunFz1-zXQ"
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+export PATH=/home/zeerodex/.local/bin:$PATH
+export LIBVIRT_DEFAULT_URI="qemu:///system"
+
+
 # Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='nvim'
- fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -117,8 +116,6 @@ export GEMINI_API_KEY="AIzaSyDjYMzsVW1_A7kqHDTipBW6VdunFz1-zXQ"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias gosrc="$HOME/go/src/github.com/zeerodex/"
-alias gosrctui="$HOME/go/src/github.com/zeerodex/goot"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
