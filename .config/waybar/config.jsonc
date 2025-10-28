@@ -24,7 +24,7 @@
   "modules-right": [
     "hyprland/language",
     "idle_inhibitor",
-    "pulseaudio",
+    "wireplumber",
     "clock",
     "tray",
     "custom/power-button"
@@ -79,34 +79,26 @@
     "format-ru": "RU",
     "format-uk": "UA"
   },
-  // Hyprland Workspaces
   "hyprland/workspaces": {
-    "active-only": false,
-    "all-outputs": true,
-    "warp-on-scroll": false,
-    "format": "{icon}",
-    "format-icons": {
+  "format": "{icon}",
+  "on-click": "activate",
+  "format-icons": {
       "1": "1",
       "2": "2",
       "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
+      "4": "󰈙",
+      "5": "󰊖",
+      "6": "",
       "7": "7",
       "8": "8",
       "9": "9",
       "10": "10",
-      "browser": "",
       "code": "",
-      "tg": "",
-      "meeting": "",
-      "notes": "",
-      "games": "󰊖",
-      "documents": "󰈙"
-    },
-    "persistent-workspaces": {
-      "*": 3
-    }
+      "browser": "",
+    "urgent": "",
+    "default": ""
+  },
+  "sort-by-number": true
   },
   // Idle Inhibitor Module
   "idle_inhibitor": {
@@ -123,14 +115,11 @@
     "interval": 10,
     "on-click-right": "kitty -e btop"
   },
-  // PulseAudio Module
-  "pulseaudio": {
+  "wireplumber": {
     "scroll-step": 1,
-    "format": "{icon} {volume}%",
-    "format-muted": "<span color='#cc241d'>󰝟</span> {volume}%",
-    "format-bluetooth": "<span color='#458588'>󰂰</span> {volume}%",
-    "format-bluetooth-muted": "<span color='#cc241d'>󰂲</span> {volume}%",
-    "format-source": "<span color='#458588'>󰍬</span> {volume}%",
+    "format": "{format_source} {icon} {volume}%",
+    "format-muted": "{format_source} <span color='#cc241d'>󰝟</span>",
+    "format-source": "<span color='#458588'>󰍬</span>",
     "format-source-muted": "<span color='#cc241d'>󰍭</span>",
     "format-icons": {
       "default": [
@@ -139,10 +128,11 @@
         "<span color='#458588'>󰕾</span>"
       ]
     },
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-click-right": "pavucontrol",
-    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +1%",
-    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -1%",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+    "on-click-middle": "pavucontrol",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-",
     "tooltip": false,
     "tooltip-format": "{desc} - {volume}%",
     "max-volume": 130

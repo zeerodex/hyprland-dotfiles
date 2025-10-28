@@ -15,7 +15,7 @@
 /* ======================================================== */
 
 window#waybar {
-  background: rgba(29, 32, 33, 0.8);
+  background: rgba(29, 32, 33, 0.75);
 }
 
 window#waybar.hidden {
@@ -58,7 +58,7 @@ tooltip label {
 #temperature,
 #backlight,
 #memory,
-#pulseaudio,
+#wireplumber,
 #battery,
 #idle_inhibitor,
 #language,
@@ -119,12 +119,12 @@ tooltip label {
 }
 
 /* Audio Module */
-#pulseaudio {
+#wireplumber {
   padding-left: 3px;
   color: #83a598;
 }
 
-#pulseaudio.muted {
+#wireplumber.muted {
   color: #ea6962;
 }
 
