@@ -1,0 +1,47 @@
+# Environment and Session Components
+hyprland
+hypridle
+hyprlock
+hyprpaper
+hyprpolkitagent
+waybar
+rofi
+rofi-emoji
+mako
+ly
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+
+# GUI Applications
+kitty
+thunar
+thunar-archive-plugin
+thunar-media-tags-plugin
+thunar-volman
+tumbler
+gvfs
+pavucontrol
+zathura
+zathura-pdf-poppler
+xarchiver
+
+# Theming and Appearance
+qt5ct
+qt6ct
+kvantum
+nwg-look
+papirus-icon-theme
+noto-fonts
+noto-fonts-emoji
+ttf-iosevka-nerd
+
+# Workflow Utilities
+stow
+yay
+grim
+slurp
+jq
+swappy
+cliphist
+fastfetch
+ffmpegthumbnailer

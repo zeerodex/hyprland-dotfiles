@@ -1,0 +1,41 @@
+# Gruvbox Mako Configuration
+
+# Global settings
+font=Iosevka Nerd Font 11
+width=350
+height=100
+padding=15
+margin=10
+border-size=2
+border-radius=0
+background-color=#282828
+text-color=#ebdbb2
+border-color=#504945
+default-timeout=5000
+anchor=top-right
+layer=overlay
+max-visible=5
+sort=-time
+# group-by=app-name
+max-history=100
+icon-path=/usr/share/icons/Papirus-Dark:/usr/share/icons/hicolor
+max-icon-size=48
+
+# Notification urgency styles
+[urgency=low]
+background-color=#282828
+text-color=#a89984
+border-color=#3c3836
+default-timeout=2500
+
+[urgency=normal]
+background-color=#282828
+text-color=#ebdbb2
+border-color=#504945
+default-timeout=4000
+
+[urgency=critical]
+background-color=#cc241d
+text-color=#fbf1c7
+border-color=#fb4934
+default-timeout=5000
